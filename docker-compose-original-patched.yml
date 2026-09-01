@@ -30,6 +30,8 @@ services:
     volumes:
       - oc-config:/home/node/.openclaw
       - oc-workspace:/home/node/workspace-default
+    tmpfs:
+      - /home/node/.cache:uid=1000,gid=1000
 
 volumes:
   oc-config:
